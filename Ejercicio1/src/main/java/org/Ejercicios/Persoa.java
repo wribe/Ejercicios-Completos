@@ -22,6 +22,14 @@ public abstract class Persoa {
         return edad;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public LocalDate getDataNacemento() {
+        return dataNacemento;
+    }
+
     @Override
     public String toString() {
         return "Persoa{" +
