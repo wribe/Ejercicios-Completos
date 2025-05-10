@@ -26,6 +26,22 @@ public class Mago extends Persoa{
         return false;
     }
 
+    public String getTipoVasoira() {
+        return tipoVasoira;
+    }
+
+    public Casa getCasa() {
+        return casa;
+    }
+
+    public void setTipoVasoira(String tipoVasoira) {
+        this.tipoVasoira = tipoVasoira;
+    }
+
+    public void setCasa(Casa casa) {
+        this.casa = casa;
+    }
+
     @Override
     public String toString() {
         return "Mago{" +
