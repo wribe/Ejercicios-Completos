@@ -35,7 +35,7 @@ public class Main {
         System.out.println(h);
         h.engadirAlumnx(m4);
         System.out.println(h);
-        //h.graduar(m);
+        h.graduar(m);
         h.listarProfesores();
     }
 }
