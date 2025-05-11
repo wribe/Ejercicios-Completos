@@ -21,7 +21,9 @@ public class Profesor extends Mago implements  Docente{
 
     @Override
     public void explicar(){
-        String frase = FRASES[(int) Math.random()];
+        int min = 0;
+        int max = 7;
+        String frase = FRASES[(int) (Math.random()* (max - (min + 2)) + min)];
         System.out.println(frase);
     }
 

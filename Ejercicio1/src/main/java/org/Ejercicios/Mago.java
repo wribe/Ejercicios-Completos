@@ -20,7 +20,7 @@ public class Mago extends Persoa{
 
     @Override
     boolean eMaiorIdade(){
-        if (calcularIdade() <= 18){
+        if (calcularIdade() >= 18){
             return true;
         }
         return false;

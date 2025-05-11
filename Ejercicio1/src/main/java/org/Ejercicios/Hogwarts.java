@@ -7,11 +7,17 @@ public class Hogwarts {
     private ArrayList<Mago> alumnxs;
     private HashMap<String, Profesor> materias;
 
+    public Hogwarts(ArrayList<Mago> alumnxs, HashMap<String, Profesor> materias) {
+        this.alumnxs = alumnxs;
+        this.materias = materias;
+    }
+
     void engadirAlumnx(Mago mago){
         int min = 0;
         int max = 3;
         Casa[] casas = new Casa[] {Casa.GRYFINDOR, Casa.HUFFLEPUFF, Casa.RAVENCLAW, Casa.SLYTHERIN};
-        mago.setCasa(casas[(int) (Math.random() * (max - min) + min)]);
+        mago.setCasa(casas[(int) (Math.random() * (max - (2)) + min)]);
+        alumnxs.add(mago);
     }
 
     void graduar(Mago mago){
@@ -40,5 +46,13 @@ public class Hogwarts {
             }
         }
         return magos;
+    }
+
+    @Override
+    public String toString() {
+        return "Hogwarts{" +
+                "alumnxs=" + alumnxs +
+                ", materias=" + materias +
+                '}';
     }
 }
