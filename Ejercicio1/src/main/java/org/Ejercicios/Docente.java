@@ -1,6 +1,6 @@
 package org.Ejercicios;
 
-interface Docente {
+public interface Docente {
     void imponerDisciplina();
     void explicar();
 }
