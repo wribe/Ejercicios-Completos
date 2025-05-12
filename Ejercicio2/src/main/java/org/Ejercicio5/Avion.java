@@ -13,9 +13,9 @@ public class Avion extends Vehiculo implements Voador{
         this.consumo = consumo;
     }
 
-    public double maximaDistanciaPercorrer(){
+    /*public double maximaDistanciaPercorrer(){
 
-    }
+    }*/
 
     @Override
     public void aterrar(){
