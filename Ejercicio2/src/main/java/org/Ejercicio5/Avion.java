@@ -1,7 +1,7 @@
 package org.Ejercicio5;
 
 public class Avion extends Vehiculo implements Voador{
-    private int consumo;
+    private int consumo; // por cada  100 km x consumo
 
     public Avion(String modelo, String numeroDeSerie, int consumo) {
         super(modelo, numeroDeSerie);
@@ -17,9 +17,10 @@ public class Avion extends Vehiculo implements Voador{
         return consumo;
     }
 
-    /*public double maximaDistanciaPercorrer(){
-
-    }*/
+    public double maximaDistanciaPercorrer(){
+        double dist = (double)(super.getCantidadCombustible() * 100)/consumo;
+        return dist;
+    }
 
     @Override
     public void aterrar(){
