@@ -2,6 +2,7 @@ package org.Ejercicios;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 
 public class Hogwarts {
     private ArrayList<Mago> alumnxs;
@@ -21,12 +22,24 @@ public class Hogwarts {
     }
 
     void graduar(Mago mago){
-        for (Mago m: alumnxs){
+        Iterator<Mago> iterator = alumnxs.iterator();
+        while (iterator.hasNext()){
+            Mago m = iterator.next();
             if (m.equals(mago)){
-                alumnxs.remove(mago);
+                iterator.remove();
             }
         }
     }
+    //    public void eliminarViaxe(int codigo) {
+//        Iterator<Viaxe> iterator = viaxes.iterator();
+//        while (iterator.hasNext()) {
+//            Viaxe viaxe = iterator.next();
+//            if (viaxe.getCodigo() == codigo) {
+//                iterator.remove();
+//                return;
+//            }
+//        }
+//    }
 
     void asignarProfesor(String materia, Profesor profesor){
         materias.put(materia, profesor);
