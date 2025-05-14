@@ -18,6 +18,14 @@ public abstract class Peza implements Conectable{
         return numeroDeSerie;
     }
 
+    public Cor getCor() {
+        return cor;
+    }
+
+    public ArrayList<Peza> getPezas() {
+        return pezas;
+    }
+
     public abstract int getNumeroConectores();
 
     @Override
@@ -40,7 +48,7 @@ public abstract class Peza implements Conectable{
         }return false;
     }
 
-//    public void eliminarViaxe(int codigo) {
+    //    public void eliminarViaxe(int codigo) {
 //        Iterator<Viaxe> iterator = viaxes.iterator();
 //        while (iterator.hasNext()) {
 //            Viaxe viaxe = iterator.next();
