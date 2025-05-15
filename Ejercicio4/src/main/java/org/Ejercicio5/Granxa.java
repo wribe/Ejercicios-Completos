@@ -22,7 +22,7 @@ public class Granxa {
         this.localizacion = localizacion;
         this.encargado = encargado;
         this.empregados = new ArrayList<>();
-        this.numAnimais = new int[] {0, 0, 0, 0, 0};
+        this.numAnimais = new int[] {0, 0, 0, 0, 0}; // porcos, vacas, galiñas, coellos, ovellas
     }
 
     public String getNome() {
@@ -59,7 +59,36 @@ public class Granxa {
 
     public void engadirAnimal(TipoAnimal t){
         for (int i = 0; i < numAnimais.length; i++) {
+            if (t.equals(TipoAnimal.PORCOS)&& i == 0){
+                numAnimais[i] = numAnimais[i] - 1;
+            } else if (t.equals(TipoAnimal.VACAS) && i == 1){
+                numAnimais[i] = numAnimais[i] -1;
+            }else if (t.equals(TipoAnimal.GALIÑAS) && i == 2){
+                numAnimais[i] = numAnimais[i] -1;
+            } else if (t.equals(TipoAnimal.COELLOS) && i == 3){
+                numAnimais[i] = numAnimais[i] -1;
+            }else if (t.equals(TipoAnimal.OVELLAS) && i == 4){
+                numAnimais[i] = numAnimais[i] -1;
+            }
+        }
+    }
 
+    public void engadirEmpregado(Empregado e){
+        empregados.add(e);
+    }
+
+    public int getNumeroAnimais(){
+        int t = 0;
+        for (int i = 0; i < numAnimais.length; i++) {
+            t = t + numAnimais[i];
+        }return t;
+    }
+
+    public int getNumeroEmpregados(boolean coidadores){
+        if (coidadores){
+            for (int i = 0; i < empregados.size(); i++) {
+
+            }
         }
     }
 }
