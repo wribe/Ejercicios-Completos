@@ -7,7 +7,7 @@ public class PezaBasica extends Peza{
     private int ancho;
     private int largo;
 
-    public PezaBasica(Cor cor, String numeroDeSerie, int alto, int ancho, int largo) {
+    public PezaBasica(Cor cor, int numeroDeSerie, int alto, int ancho, int largo) {
         super(cor, numeroDeSerie);
         this.alto = alto;
         this.ancho = ancho;
@@ -22,7 +22,7 @@ public class PezaBasica extends Peza{
     @Override
     public boolean equals(Object o) {
         if (!(o instanceof PezaBasica that)) return false;
-        return super.getNumeroDeSerie().equals(that.getNumeroDeSerie());
+        return super.getNumeroDeSerie() == that.getNumeroDeSerie();
     }
 
     @Override

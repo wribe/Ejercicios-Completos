@@ -5,16 +5,16 @@ import java.util.Iterator;
 
 public abstract class Peza implements Conectable{
     private Cor cor;
-    private String numeroDeSerie;
+    private int numeroDeSerie;
     private ArrayList<Peza> pezas;
 
-    public Peza(Cor cor, String numeroDeSerie) {
+    public Peza(Cor cor, int numeroDeSerie) {
         this.cor = cor;
         this.numeroDeSerie = numeroDeSerie;
         this.pezas = new ArrayList<>();
     }
 
-    public String getNumeroDeSerie() {
+    public int getNumeroDeSerie() {
         return numeroDeSerie;
     }
 
@@ -41,7 +41,7 @@ public abstract class Peza implements Conectable{
         Iterator<Peza> iterator = pezas.iterator();
         while (iterator.hasNext()){
             Peza peza = iterator.next();
-            if (peza.getNumeroDeSerie() == numeroSerie){
+            if (Integer.toString(peza.getNumeroDeSerie()).equals(numeroSerie)){
                 iterator.remove();
                 return true;
             }
